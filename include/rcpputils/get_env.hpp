@@ -49,7 +49,7 @@ namespace rcpputils
  * \return The value of the environment variable if it exists, or "".
  * \throws std::runtime_error on error
  */
-std::string get_env_var(const char * env_var)
+inline std::string get_env_var(const char * env_var)
 {
   const char * value{};
   const char * err = rcutils_get_env(env_var, &value);
